@@ -1,0 +1,14 @@
+{
+  "Picture Recognition": {
+    "Animals": {
+      "Practice": {
+        "itemName": "PracticeItem$",
+        "timeName": "PracticeTime$"
+      },
+      "Stimuli": {
+        "itemName": "Item$",
+        "timeName": "Time$"
+      }
+    }
+  }
+}

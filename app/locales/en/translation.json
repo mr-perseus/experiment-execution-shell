@@ -1,0 +1,46 @@
+{
+  "Home": {
+    "Title": "Experiment Execution Shell",
+    "Tests": "Tests",
+    "Configuration": "Configuration",
+    "Help": "Help",
+    "Exit": "Exit"
+  },
+  "PatientData": {
+    "Title": "Patient Data",
+    "PatientId": "Patient ID",
+    "DateOfBirth": "Date of Birth",
+    "Gender": "Gender",
+    "YearsOfEducation": "Years Of Education"
+  },
+  "ResultTexts": {
+    "Correct": "Your answer was correct.",
+    "Incorrect": "Your answer was <strong>not</strong> correct.",
+    "Unanswered": "The question wasn't answered."
+  },
+  "Buttons": {
+    "AbortTest": "(abort test)",
+    "StartPractice": "Start Practice",
+    "StartTest": "Start Test",
+    "RepeatPractice": "Repeat Practice"
+  },
+  "CompletionPage": {
+    "Title": "Picture Naming Test Results",
+    "Correct": "Correct",
+    "Incorrect": "False",
+    "Unanswered": "No Answer",
+    "ExportButton": "to Export"
+  },
+  "Config": {
+    "Title": "Key bindings",
+    "SaveButton": "Save"
+  },
+  "GoodBye": {
+    "Text": "Thank you for completing the test!"
+  },
+  "Export": {
+    "Title": "Export",
+    "SuccessFlag": "Export successful",
+    "CanceledFlag": "Export canceled"
+  }
+}

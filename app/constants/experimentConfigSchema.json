@@ -1,0 +1,185 @@
+{
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "name",
+    "introduction",
+    "subSteps",
+    "stimuliConfig",
+    "practiceConfig"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": ["Simple Experiment"],
+      "pattern": "^(.*)$"
+    },
+    "introduction": {
+      "$id": "#/properties/introduction",
+      "type": "string",
+      "title": "The Introduction Schema",
+      "default": "",
+      "examples": [
+        "Description of the simple experiment with some instructions"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "introductionImage": {
+      "$id": "#/properties/introductionImage",
+      "type": "string",
+      "title": "The Introductionimage Schema",
+      "default": "",
+      "examples": ["path-to-image.png"],
+      "pattern": "^(.*)$"
+    },
+    "keyBindingInstructions": {
+      "$id": "#/properties/keyBindingInstructions",
+      "type": "string",
+      "title": "The Keybindinginstructions Schema",
+      "default": "",
+      "examples": [
+        "Description on how to correctly configure the simple experiment key bindings"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "keyBindings": {
+      "$id": "#/properties/keyBindings",
+      "type": "array",
+      "title": "The Keybindings Schema",
+      "items": {
+        "$id": "#/properties/keyBindings/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": ["answerId", "key"],
+        "properties": {
+          "answerId": {
+            "$id": "#/properties/keyBindings/items/properties/answerId",
+            "type": "integer",
+            "title": "The Answerid Schema",
+            "examples": [1]
+          },
+          "key": {
+            "$id": "#/properties/keyBindings/items/properties/key",
+            "type": "string",
+            "title": "The Key Schema",
+            "default": "",
+            "examples": ["n"],
+            "pattern": "^(.)$"
+          }
+        }
+      }
+    },
+    "subSteps": {
+      "$id": "#/properties/subSteps",
+      "type": "object",
+      "title": "The Substeps Schema",
+      "patternProperties": {
+        "^(.*)$": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "$id": "#/properties/subSteps/properties/blank/properties/type",
+              "type": "string",
+              "title": "The Type Schema",
+              "default": "",
+              "examples": ["blank"],
+              "pattern": "^(.*)$"
+            },
+            "time": {
+              "$id": "#/properties/subSteps/properties/blank/properties/time",
+              "type": "integer",
+              "title": "The Time Schema",
+              "default": 0,
+              "examples": [1000]
+            },
+            "bindKeys": {
+              "$id": "#/properties/subSteps/properties/image/properties/bindKeys",
+              "type": "boolean",
+              "title": "The Bindkeys Schema",
+              "default": false,
+              "examples": [true]
+            },
+            "triggerNext": {
+              "$id": "#/properties/subSteps/properties/image/properties/triggerNext",
+              "type": "boolean",
+              "title": "The Triggernext Schema",
+              "default": false,
+              "examples": [true]
+            },
+            "waitForSpaceOrEnter": {
+              "$id": "#/properties/subSteps/properties/solutionIfNotCorrect/properties/waitForSpaceOrEnter",
+              "type": "boolean",
+              "title": "The Waitforspaceorenter Schema",
+              "default": false,
+              "examples": [true]
+            },
+            "displayAnswer": {
+              "$id": "#/properties/subSteps/properties/solutionIfCorrect/properties/displayAnswer",
+              "type": "boolean",
+              "title": "The Displayanswer Schema",
+              "default": false,
+              "examples": [true]
+            },
+            "stepIncludes": {
+              "type": "object",
+              "patternProperties": {
+                "^(.*)$": {
+                  "type": ["string", "number", "array"]
+                }
+              }
+            },
+            "conditionsOnResult": {
+              "$id": "#/properties/subSteps/properties/solutionIfNotCorrect/properties/conditionsOnResult",
+              "type": "array",
+              "title": "The Conditionsonresult Schema",
+              "items": {
+                "$id": "#/properties/subSteps/properties/solutionIfNotCorrect/properties/conditionsOnResult/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": ["Incorrect", "Unanswered"],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "stimuliConfig": {
+      "$ref": "#/definitions/experimentPart"
+    },
+    "practiceConfig": {
+      "$ref": "#/definitions/experimentPart"
+    }
+  },
+  "definitions": {
+    "experimentPart": {
+      "type": "object",
+      "properties": {
+        "dataPath": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "item": {
+            "type": "object",
+            "patternProperties": {
+              "^.*$": {
+                "type": ["string", "number"]
+              }
+            }
+          },
+          "subStepRefs": {
+            "type": "array",
+            "item": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

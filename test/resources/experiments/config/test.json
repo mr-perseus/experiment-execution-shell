@@ -1,0 +1,64 @@
+{
+  "name": "Test Experiment",
+  "keyBindings": {
+    "testBinding": {
+      "A": 1
+    }
+  },
+  "subSteps": {
+    "test-sub1": {
+      "type": "cross",
+      "path": "test.jpg",
+      "time": 1000
+    },
+    "test-sub2": {
+      "type": "image",
+      "keyBindRef": "testBinding",
+      "stepIncludes": {
+        "imagePath": "image",
+        "correctAnswer": "correctAnswer"
+      },
+      "time": 10000
+    },
+    "test-sub3": {
+      "type": "image",
+      "displayAnswer": true,
+      "stepIncludes": {
+        "imagePath": "solutionImage"
+      },
+      "time": 5000
+    }
+  },
+  "stimuliConfig": {
+    "name": "Stimuli",
+    "dataPath": "experiments/data/test/Stimuli",
+    "subStepRefs": ["test-sub1", "test-sub2"],
+    "steps": [
+      {
+        "image": "stim1.jpg",
+        "correctAnswer": 1
+      },
+      {
+        "image": "stim.jpg",
+        "correctAnswer": 2
+      }
+    ]
+  },
+  "practiceConfig": {
+    "name": "Practice",
+    "dataPath": "experiments/data/test/Practice",
+    "subStepRefs": ["test-sub1", "test-sub2", "test-sub3"],
+    "steps": [
+      {
+        "image": "prac1.jpg",
+        "solutionImage": "prac1_sol.jpg",
+        "correctAnswer": 1
+      },
+      {
+        "image": "prac2.jpg",
+        "solutionImage": "prac2_sol.jpg",
+        "correctAnswer": 2
+      }
+    ]
+  }
+}

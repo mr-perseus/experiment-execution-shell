@@ -1,0 +1,91 @@
+{
+  "name": "Animals",
+  "introduction": "Press {{2}}, if there is an animal in the picture. Press {{1}} if not.",
+  "groupName": "Picture Recognition",
+  "keyBindingInstructions": "1 is no, 2 is yes",
+  "keyBindings": [
+    {
+      "answerId": 1,
+      "key": "n"
+    },
+    {
+      "answerId": 2,
+      "key": "y"
+    }
+  ],
+  "subSteps": {
+    "cross": {
+      "type": "cross",
+      "path": "FixationCross.bmp",
+      "time": 500
+    },
+    "blankBeforeImage": {
+      "type": "blank",
+      "time": 250
+    },
+    "image": {
+      "type": "image",
+      "bindKeys": true,
+      "triggerNext": true,
+      "stepIncludes": {
+        "imagePath": "image",
+        "correctAnswer": "correctAnswer"
+      },
+      "time": 1800
+    },
+    "blankAfterImage": {
+      "type": "blank",
+      "time": 2000,
+      "bindKeys": true,
+      "stepIncludes": {
+        "correctAnswer": "correctAnswer"
+      }
+    },
+    "solution": {
+      "type": "text",
+      "displayAnswer": true,
+      "stepIncludes": {},
+      "time": 1500
+    }
+  },
+  "stimuliConfig": {
+    "name": "Stimuli",
+    "dataPath": "experiments/data/PR/Animals/Stimuli",
+    "subStepRefs": ["cross", "blankBeforeImage", "image", "blankAfterImage"],
+    "steps": [
+      {
+        "image": "lion.jpg",
+        "correctAnswer": 2
+      },
+      {
+        "image": "aston-martin.jpg",
+        "correctAnswer": 1
+      },
+      {
+        "image": "hawk.jpg",
+        "correctAnswer": 2
+      }
+    ]
+  },
+  "practiceConfig": {
+    "name": "Practice",
+    "dataPath": "experiments/data/PR/Animals/Practice",
+    "subStepRefs": [
+      "cross",
+      "blankBeforeImage",
+      "image",
+      "blankAfterImage",
+      "solution"
+    ],
+    "steps": [
+      {
+        "image": "horse.jpg",
+        "correctAnswer": 2
+      },
+      {
+        "image": "hogwarts-express.jpg",
+        "correctAnswer": 1
+      }
+    ]
+  }
+}

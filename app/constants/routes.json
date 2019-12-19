@@ -1,0 +1,12 @@
+{
+  "HOME": "/",
+  "HELP": "/help",
+  "CONFIG": "/config",
+  "PATIENT_DATA": "/patientData",
+  "EXPERIMENT_ESCAPE": "/experiments/escape",
+  "EXPERIMENT_CONTAINER": "/experiments/experimentContainer",
+  "EXPERIMENT_INTRODUCTION": "/experiments/experimentIntroduction",
+  "GOOD_BYE": "/experiments/goodbye",
+  "COMPLETION": "/experiments/completion",
+  "EXPORT": "/experiments/export"
+}

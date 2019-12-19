@@ -1,0 +1,14 @@
+.control-group {
+  display: flex;
+}
+
+.control-group a {
+  flex-grow: 1;
+}
+
+.control-group button {
+  flex-grow: 0;
+  padding: 1em;
+  vertical-align: middle;
+  box-sizing: border-box;
+}

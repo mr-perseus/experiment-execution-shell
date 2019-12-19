@@ -1,0 +1,18 @@
+.exportButton {
+  transform: translateX(50%);
+  right: 50%;
+  position: absolute;
+  padding: 10px;
+  border-radius: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  font-size: x-large;
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+.buttonWrapper {
+  position: relative;
+  height: 50px;
+}

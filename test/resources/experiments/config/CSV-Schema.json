@@ -1,0 +1,50 @@
+{
+  "Test Experiment Group 0": {
+    "Test Experiment Group 0 Name 0": {
+      "Practice": {
+        "itemName": "Testitem$v",
+        "timeName": "testtime$v"
+      },
+      "Stimuli": {
+        "itemName": "Item$v",
+        "timeName": "time$v"
+      }
+    },
+    "Test Experiment Group 0 Name 1": {
+      "Practice": {
+        "itemName": "Testitem$a",
+        "timeName": "testtime$a"
+      },
+      "Stimuli": {
+        "itemName": "Item$a",
+        "timeName": "time$a"
+      }
+    },
+    "Test Experiment Group 0 Name 2": {
+      "Practice": {
+        "itemName": "Testitem$x",
+        "timeName": "testtime$x"
+      },
+      "Stimuli": {
+        "itemName": "Item$x",
+        "timeName": "time$x"
+      }
+    }
+  },
+  "Test Experiment 1": {
+    "Test Experiment 1": {
+      "Practice": {
+        "itemName": "Testitem$",
+        "timeName": "testtime$",
+        "suffix": {
+          "text": " (Filler)",
+          "ids": [1]
+        }
+      },
+      "Stimuli": {
+        "itemName": "Item$",
+        "timeName": "time$"
+      }
+    }
+  }
+}
