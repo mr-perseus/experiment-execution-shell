@@ -1,7 +1,7 @@
 {
   "name": "experiment-execution-shell",
   "productName": "Experiment Execution Shell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Execution shell for experiments for early diagnosis of Alzheimer’s disease.",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -112,14 +112,18 @@
     "url": "git+https://github.com/mr-perseus/experiment-execution-shell.git"
   },
   "author": {
-    "name": "Experiment Execution Shell Team"
+    "name": "Experiment Execution Shell Team",
+    "email": "janfrei01@gmail.com",
+    "url": "https://github.com/mr-perseus/experiment-execution-shell"
   },
   "contributors": [
     {
-      "name": "aced0"
+      "name": "aced0",
+      "url": "https://github.com/aced0"
     },
     {
-      "name": "mr-perseus"
+      "name": "mr-perseus",
+      "url": "https://github.com/mr-perseus"
     }
   ],
   "license": "MIT",
